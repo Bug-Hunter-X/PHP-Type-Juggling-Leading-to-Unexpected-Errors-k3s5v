@@ -1,0 +1,3 @@
+# PHP Type Juggling Bug
+
+This repository demonstrates a common but subtle bug in PHP related to type juggling and type hinting.  The `foo` function is type hinted to accept two integers, but the example code passes it an integer and a string. PHP will attempt to implicitly convert the string '2' to an integer, but this can lead to unexpected results and, if the conversion fails, a `TypeError`. This demonstrates a potential vulnerability as it bypasses the expected type checking.  The solution provides a method to mitigate this by adding explicit type checking.
